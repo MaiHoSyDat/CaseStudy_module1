@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="shopCSS.css">
+
+
+</head>
+<body>
+
+<div style=" background-color: black; color: white; height: 50px">
+    <marquee width="100%" behavior="scroll" bgroind-color="black">
+        <h3>Mọi thắc mắc vui lòng liên hệ qua số điện thoại : 0987 654 321 || ĐẠT PHÈO BITI'S - Cửa hàng bán lẻ giày
+            Biti's lớn số 1 tại HÀ NỘI! AHIHI</h3>
+    </marquee>
+</div>
+<hr style="border-color: red">
+<div style="text-align: right; width: 100%; margin-bottom: 0px">
+</div>
+<table width="100%" id="giaodien">
+    <tr>
+        <td>
+            <a href="TrangChu.html"><img src="hinhAnh/logo.png" height="73.8" width="120"/></a>
+        </td>
+        <td><a href="TrangChu.html">Trang chủ</a></td>
+        <td><a href="thongTin.html">Thông Tin</a></td>
+        <td><a href="sanPham.html">Sản Phẩm</a></td>
+        <td style=" padding-right: 15px; width: 235px; height:30px; text-align: right ">
+            <div id="icon">
+                <button style="border: 0px; background-color: white"><i
+                        class="glyphicon glyphicon-user"
+                        style="font-size:27px;color:red"></i>
+                </button>
+            </div>
+            <div id="nameUser" style="color: red; font-size: 20px"></div>
+            <button id="logout" onclick="logOut()" hidden="hidden">Log out</button>
+            <button style="border: 0px; background-color: white"><a href="gioHang.html"><i
+                    class="fa fa-shopping-cart"
+                    style="font-size:30px;color:red"></i></a>
+            </button>
+
+            <div style="border: 1px solid red; border-radius: 10px">
+                <form action="https://bitis.com.vn/">
+                    <span style="vertical-align: bottom;;" class="material-symbols-outlined">Search</span>
+                    <input id="input1" style="border:none; height: 22px; border-radius: 10px" class="&#128269 "
+                           placeholder="Bạn cần tìm gì...">
+                </form>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr style="border-color: red">
+
+<center>
+    <table id="table1">
+        <thead>
+        <tr>
+            <th>
+                <button id="mausac1" onclick="dangNhap()" style="font-size: 20px; background-color: white;
+                 border: 0px; border-right: 1px">ĐĂNG NHẬP
+                </button>
+            </th>
+            <th>
+                <button id="mausac2" onclick="dangKy()"
+                        style="font-size: 20px; border: 0px; background-color: white">ĐĂNG KÝ
+                </button>
+            </th>
+        </tr>
+        </thead>
+        <tbody id="hienThi">
+        </tbody>
+
+    </table>
+</center>
+
+<table id="tb1">
+    <tr>
+        <td><img class="a" src="hinhAnh/giaodien1.jpg" height="240" width="240"/></td>
+    </tr>
+    <tr>
+        <td><img class="a" src="hinhAnh/giaodien2.jpg" height="240" width="240"/></td>
+    </tr>
+    <tr>
+        <td><img class="a" src="hinhAnh/giaodien3.webp" height="240" width="240"/></td>
+    </tr>
+
+</table>
+<table id="tb2">
+    <tr>
+        <td><img class="a" src="hinhAnh/giaodien4.webp" height="240" width="240"/></td>
+    </tr>
+    <tr>
+        <td><img class="a" src="hinhAnh/giaodien5.webp" height="240" width="240"/></td>
+    </tr>
+    <tr>
+        <td><img class="a" src="hinhAnh/giaodien6.webp" height="240" width="240"/></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
+<script>
+    //Gọi 2 bảng Đăng ký và Đăng nhập:
+    function dangNhap() {
+        document.getElementById("mausac1").style.color = "red"
+        document.getElementById("mausac2").style.color = "black";
+        let str = "<tr>";
+        str += ` <th colspan="2">Tài Khoản:</th></tr>
+                 <tr><td colspan="2"><input id="tk" style="width: 250px" placeholder="Tài khoản" required></td></tr>
+                <tr><th colspan="2">Mật Khẩu:</th></tr>
+                 <tr><td colspan="2"><input type="password" id="mk" style="width: 250px" placeholder="Mật khẩu" required></td></tr>
+                 <tr><td colspan="2"><button onclick="kiemTraTK()">ĐĂNG NHẬP</button></td></tr>`
+        document.getElementById("hienThi").innerHTML = str;
+    }
+
+    function dangKy() {
+        document.getElementById("mausac2").style.color = "red";
+        document.getElementById("mausac1").style.color = "black";
+        let str = "<tr>";
+        str += ` <th colspan="2">Họ tên:</th>
+                 <tr><td colspan="2"><input id="name" style="width: 250px" placeholder="Họ tên"></td></tr>
+                 <tr><th colspan="2">Số điện thoai:</th></tr>
+                 <tr><td colspan="2"><input  id="phone" style="width: 250px" placeholder="Số điện thoại"></td></tr>
+                 <tr><th colspan="2"> Giới tính :</th></tr>
+                 <tr><td colspan="2"><input style="height: 10px" name="gt" type="radio">Nam</input></td></tr>
+                 <tr><td colspan="2"><input style="height: 10px" name="gt" type="radio">Nữ</input></td></tr>
+                 <tr><th colspan="2">Tài khoản:</th></tr>
+                 <tr><td colspan="2"><input id="acc" style="width: 250px" placeholder="Tài khoản"></td></tr>
+                 <tr><th colspan="2">Mật Khẩu:</th></tr>
+                 <tr><td colspan="2"><input id="pass" type="password" style="width: 250px" placeholder="Mật khẩu"></td></tr>
+                 <tr><td colspan="2"><button onclick="dangKyTK()">ĐĂNG KÝ</button></td></tr>
+                 <tr><td><a onclick="dangNhap()" style="font-size: 20px">Đã có tài khoản</a></td></tr>`
+        document.getElementById("hienThi").innerHTML = str;
+    }
+
+    //Đăng ký và Đăng nhập tài khoản:
+
+    let users = [];
+
+    function dangKyTK() {
+
+        let nameInput = document.getElementById("name").value;
+        let phoneInput = document.getElementById("phone").value;
+        let accInput = document.getElementById("acc").value;
+        let passInput = document.getElementById("pass").value;
+
+        if (nameInput === "" || phoneInput === "" || accInput === "" || passInput === "") {
+            alert("Hãy nhập đủ thông tin")
+        } else {
+            users = JSON.parse(localStorage.getItem("user"))
+            if (users === null) {
+                users = [];
+            }
+            for (let i = 0; i < users.length; i++) {
+                if (accInput === users[i].account) {
+                    alert("Tài khoản đã tồn tại")
+                    return;
+                }
+            }
+            let user = {
+                username: nameInput,
+                telephone: phoneInput,
+                account: accInput,
+                password: passInput,
+            }
+            users.push(user)
+            localStorage.setItem("user", JSON.stringify(users));
+            alert("Đăng ký thành công!");
+            dangNhap();
+        }
+
+    }
+
+    function kiemTraTK() {
+
+        let account = document.getElementById("tk").value;
+        let password = document.getElementById("mk").value;
+        let storedUser = JSON.parse(localStorage.getItem("user"));
+
+        if (storedUser) {
+            for (let i = 0; i < storedUser.length; i++) {
+                if (storedUser[i].account === account) {
+                    if (storedUser[i].password === password) {
+                        alert("Đăng nhập thành công!");
+                        document.location.href = "sanPham.html"
+                        localStorage.setItem("nameUser", JSON.stringify(storedUser[i].username));
+                        return;
+                    } else {
+                        alert("Mật khẩu không chính xác!");
+                        return;
+                    }
+                }
+            }
+            alert("Tài khoản không tồn tại!");
+        } else {
+            alert("Tài khoản chưa được đăng ký!");
+        }
+    }
+
+</script>
+<script src="name_User.js"></script>

@@ -1,0 +1,101 @@
+
+#table1 {
+    width: 400px;
+}
+
+#table1 input {
+    background-color: lemonchiffon;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#input1:focus {
+    outline: none;
+    border-radius: 10px
+}
+
+#giaodien a {
+    font-size: 24px;
+}
+
+#giaodien td {
+    vertical-align: bottom;
+}
+
+#hienThi tr {
+    height: 30px;
+}
+
+#tb1 {
+    position: absolute;
+    top: 220px;
+
+}
+
+#tb2 {
+    position: absolute;
+    top: 220px;
+    right: 0px;
+}
+
+.a:hover {
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.b:hover {
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+#mausac1:hover {
+    color: red;
+
+}
+
+#mausac2:hover {
+    color: red;
+
+}
+#table1 {
+    width: 400px;
+}
+
+#table1 input {
+    background-color: lemonchiffon;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#tableCart th{
+    font-size: 20px;
+    width: 400px;
+}
+#tableCart tr {
+    border: 3px solid red;
+    font-size: 24px;
+}
+#tableCart img{
+    width: 200px;
+    height: 200px;
+}
+#tablesp td {
+    width: 340px;
+    padding: 15px;
+}
+
+#tablesp img {
+    height: 300px;
+    width: 300px;
+}
+
+.anh:hover {
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+
+#tablesp th {
+    text-align: center;
+}
+
+#tablesp tr {
+    border: 3px solid red;
+}
